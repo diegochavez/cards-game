@@ -1,0 +1,15 @@
+<template name="NewCard">
+  {{> Header}}
+  <div class="new-card-container">
+    <div class="container">
+      <hr>
+      <br><br>
+
+      <div class="well">
+        <h2>Add Card</h2>
+        {{> quickForm collection="Cards" id="insertCardForm" type="insert" class="new-card-form" }}
+      </div>
+
+    </div>
+  </div>
+</template>

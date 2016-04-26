@@ -1,0 +1,22 @@
+<template name="Cards">
+<div class="container">
+  <h2>Cards List</h2>
+  <hr>
+  <section class="cards-list">
+    {{#each cards}}
+      {{> cardsRow}}
+    {{/each}}
+  </section>
+</div>
+</template>
+
+
+<template name="cardsRow">
+  <div class="row">
+    {{#each row}}
+      <div class="col-sm-3 col-xs-12">
+      {{> Card}}
+      </div>
+    {{/each}}
+  </div>
+</template>
