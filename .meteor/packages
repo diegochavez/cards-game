@@ -20,6 +20,9 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 twbs:bootstrap
 fezvrasta:bootstrap-material-design
 ian:accounts-ui-bootstrap-3
+useraccounts:core
+useraccounts:bootstrap
+useraccounts:flow-routing
 accounts-password
 fourseven:scss
 
@@ -32,3 +35,4 @@ aldeed:autoform
 spiderable
 dburles:collection-helpers
 meteortoys:allthings
+meteorhacks:fast-render

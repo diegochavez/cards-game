@@ -5,7 +5,8 @@ Template.Cards.helpers({
   //   return Cards.find({});
   // },
   cards: ()=> {
-     all = Cards.find({}).fetch();
+    let dl = limit | 12;
+     all = Cards.find({},{skip:0,limit:dl}).fetch();
      chunks = [];
      size = 4;
      while (all.length > size) {
@@ -15,4 +16,4 @@ Template.Cards.helpers({
      chunks.push({row: all});
      return chunks;
  }
-})
+});

@@ -1,0 +1,13 @@
+<template name="Home">
+  <div class="container">
+    <main>
+      <div class="jumbotron">
+        <h2>Meteor Full Stack Framework</h2>
+        {{#unless currentUser}}
+            <p>Create an account</p>
+            <a class="btn btn-success btn-raised" href="/login">Create Account</a>
+        {{/unless}}
+      </div>
+    </main>
+  </div>
+</template>
