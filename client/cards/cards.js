@@ -1,11 +1,8 @@
 Meteor.subscribe('cards');
 
 Template.Cards.helpers({
-  // cards: ()=> {
-  //   return Cards.find({});
-  // },
   cards: ()=> {
-    let dl = limit | 12;
+    let dl = Session.get('limit') | 12;
      all = Cards.find({},{skip:0,limit:dl}).fetch();
      chunks = [];
      size = 4;
@@ -17,3 +14,10 @@ Template.Cards.helpers({
      return chunks;
  }
 });
+Template.Cards.events({
+	'click .btn-loadmore': (limit)=>{
+		let loadmore = Session.get('limit');
+		console.log('Load More', loadmore);
+		Session.set('limit',loadmore + 12);
+	}
+})

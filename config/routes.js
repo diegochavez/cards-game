@@ -13,6 +13,7 @@ FlowRouter.route('/cards', {
 });
 
 FlowRouter.route('/game', {
+		triggersEnter: [AccountsTemplates.ensureSignedIn],
     name: 'add-card',
     action(){
         BlazeLayout.render('MainLayout', {main: 'Game'});
